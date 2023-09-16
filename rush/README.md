@@ -1,1 +1,1 @@
-***This project of the 1337 RUSH day ***
+***This project of the 1337 : RUSH day the version that we collect the all functions inside the main.c***
