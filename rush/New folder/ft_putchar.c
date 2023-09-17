@@ -2,5 +2,5 @@
 
 void ft_putchar(char c)
 {
-    write(1, &c, 1); //Char printer function
+    write(1, &c, 1);
 }

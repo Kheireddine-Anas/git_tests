@@ -1,9 +1,7 @@
 #include <unistd.h>
 
 void	ft_putchar(char c);
-//void	ft_writeemptyligne(int n);
-//void	ft_writeligne(int n);
-/////////////////////////////////////////////////
+
 void	prtchar(int n, char c)
 {
 	while (n > 0)
@@ -39,7 +37,6 @@ void	ft_writeemptyligne(int n)
 		write(1, "B\n", 2);
 }
 
-/////////////////////////////////////////////////
 int rush(int x, int y)
 {
 	if (x > 1000 || y > 1000)
