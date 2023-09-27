@@ -12,12 +12,7 @@ int ft_atoi(char *str)
         str++;
     while (*str == '-' || *str == '+')
     {
-        printf("%c1\n", *str);
-        printf("%c1\n", *str);
-        printf("%c1\n", *str-1);
-        if (*str == '-' && *str == '-')
-            sg *= 1;
-        else if (*str == '-' && *str-1 == '+')
+        if (*str == '-')
             sg *= -1;
         str++;
     }
