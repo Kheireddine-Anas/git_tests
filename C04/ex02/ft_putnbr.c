@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:22:01 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/28 00:56:15 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/28 15:51:59 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr(int nb)
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return;
+		return ;
 	}
 	if (nb < 0)
 	{
@@ -37,9 +37,4 @@ void	ft_putnbr(int nb)
 	}
 	else
 		ft_putchar(nb + 48);
-}
-
-int main()
-{
-	ft_putnbr(-2147483648);
 }
