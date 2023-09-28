@@ -1,18 +1,21 @@
-#include <unistd.h>
-#include <limits.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/27 19:01:07 by akheired          #+#    #+#             */
+/*   Updated: 2023/09/27 19:05:22 by akheired         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	fact(int n)
+int	ft_recursive_factorial(int nb)
 {
-	if (n == 1 || n ==0)
+	if (nb == 1 || nb == 0)
 		return (1);
 	else
 	{
-		return (n = n * fact(n - 1));
+		return (nb = nb * fact(nb - 1));
 	}
-}
-int main()
-{
-	int n = 0;
-	printf("%d\n", fact(n));
 }

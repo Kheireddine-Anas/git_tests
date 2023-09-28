@@ -1,24 +1,25 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/27 19:00:53 by akheired          #+#    #+#             */
+/*   Updated: 2023/09/27 19:05:56 by akheired         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	fact(int n)
+int	ft_iterative_factorial(int nb)
 {
 	int	i;
 	int	as;
 
 	i = 2;
 	as = 1;
-	if (n == 1 || n ==0)
+	if (nb == 1 || nb == 0)
 		return (as);
-	else
-	{
-		while (i <= n)
-			as = as * i++;
-		return (as);
-	}
-}
-int main()
-{
-	int n = 5;
-	printf("%d\n", fact(n));
+	while (i <= nb)
+		as = as * i++;
+	return (as);
 }

@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 15:22:01 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/28 00:56:15 by akheired         ###   ########.fr       */
+/*   Created: 2023/09/27 19:29:50 by akheired          #+#    #+#             */
+/*   Updated: 2023/09/27 21:40:22 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_iterative_power(int nb, int power)
 {
-	write(1, &c, 1);
+	int	i;
+	int	pw;
+
+	i = 1;
+	pw = nb;
+	if (power < 0)
+		return (0);
+	if (nb == 0 && power == 0)
+		return (1);
+	while (i < power)
+	{
+		pw = nb * pw;
+		i++;
+	}
+	return (pw);
 }
 
-void	ft_putnbr(int nb)
+int	main(void)
 {
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
-	}
-	else if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + 48);
-}
-
-int main()
-{
-	ft_putnbr(-2147483648);
+	printf("%d", ft_iterative_power(0, 0));
 }
