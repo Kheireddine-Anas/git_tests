@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/29 21:28:26 by akheired          #+#    #+#             */
+/*   Updated: 2023/09/29 21:30:14 by akheired         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_recursive_power(int nb, int power)
 {
@@ -8,9 +18,4 @@ int	ft_recursive_power(int nb, int power)
 		return (1);
 	else
 		return (nb * ft_recursive_power(nb, power - 1));
-}
-
-int	main(void)
-{
-	printf("%d", ft_recursive_power(2, 2));
 }

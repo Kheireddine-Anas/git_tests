@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:29:50 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/27 21:40:22 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:30:36 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,4 @@ int	ft_iterative_power(int nb, int power)
 		i++;
 	}
 	return (pw);
-}
-
-int	main(void)
-{
-	printf("%d", ft_iterative_power(0, 0));
 }
