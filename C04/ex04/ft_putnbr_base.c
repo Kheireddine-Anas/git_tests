@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:55:08 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/28 16:04:38 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:20:43 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,4 @@ void	ft_putnbr_base(int nbr, char *base)
 		else
 			ft_putchar(base[num]);
 	}
-}
-
-int	main(void)
-{
-	ft_putnbr_base(-2147483648, "0123456789abcdef");
 }
