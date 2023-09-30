@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 16:10:16 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/30 16:10:49 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/30 21:57:26 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+int	ft_sqrt(int nb)
 {
-	if (index < 0)
-		return (-1);
-	if (index < 2)
-		return (index);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	long	in;
+	long	b;
+
+	b = nb;
+	if (b <= 0)
+		return (0);
+	if (b == 1)
+		return (1);
+	in = 2;
+	if (b >= 2)
+	{
+		while (in * in <= b)
+		{
+			if (in * in == b)
+				return (in);
+			in++;
+		}
+	}
+	return (0);
 }

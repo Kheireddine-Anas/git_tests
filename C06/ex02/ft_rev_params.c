@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/30 16:10:16 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/30 16:10:49 by akheired         ###   ########.fr       */
+/*   Created: 2023/09/30 12:17:16 by akheired          #+#    #+#             */
+/*   Updated: 2023/09/30 12:30:42 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	if (index < 0)
-		return (-1);
-	if (index < 2)
-		return (index);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	write(1, &c, 1);
+}
+
+int	main(int ac, char **av)
+{
+	int	j;
+	int	k;
+
+	k = 0;
+	j = 1;
+	while (av[j++])
+		k++;
+	while (ac > 1 && k > 0)
+	{
+		j = 0;
+		while (av[k][j])
+			ft_putchar(av[k][j++]);
+		ft_putchar('\n');
+		k--;
+	}
 }
