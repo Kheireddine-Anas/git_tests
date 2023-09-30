@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 16:51:25 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/30 21:58:49 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/30 23:53:18 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int	ft_is_prime(int nbr)
 
 int	ft_find_next_prime(int nb)
 {
+	if (nb == 1 || nb == 0)
+		return (2);
+	if (nb < 0)
+		return (2);
 	while (nb >= 2)
 	{
 		if (ft_is_prime(nb) == 1)

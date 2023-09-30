@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:29:50 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/29 21:30:36 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/30 23:42:07 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_iterative_power(int nb, int power)
 
 	i = 1;
 	pw = nb;
+	if (power == 0)
+		return (1);
 	if (power < 0)
 		return (0);
 	if (nb == 0 && power == 0)
