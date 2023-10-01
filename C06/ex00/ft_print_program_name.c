@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 12:05:44 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/30 12:07:12 by akheired         ###   ########.fr       */
+/*   Updated: 2023/10/01 00:44:58 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int	main(int ac, char **av)
 	i = 0;
 	while (av[0][i] && ac)
 		ft_putchar(av[0][i++]);
+	ft_putchar('\n');
 }
