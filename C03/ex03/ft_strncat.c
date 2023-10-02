@@ -6,24 +6,25 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 21:59:29 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/25 22:00:04 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/28 20:48:33 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
-	i = 0;
 	j = 0;
-	while (src[j])
-		j++;
-	while (i < nb && src[i])
-	{
-		dest[j + i] = src[i];
+	i = 0;
+	while (dest[i])
 		i++;
+	while (src[j] && j < nb)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	dest[j + i] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

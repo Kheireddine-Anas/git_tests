@@ -6,24 +6,25 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 21:58:06 by akheired          #+#    #+#             */
-/*   Updated: 2023/09/25 21:59:17 by akheired         ###   ########.fr       */
+/*   Updated: 2023/09/28 20:47:48 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	j;
+	int	x;
 
+	x = 0;
 	i = 0;
-	j = 0;
-	while (src[j])
-		j++;
+	while (dest[x])
+		x++;
 	while (src[i])
 	{
-		dest[j + i] = src[i];
+		dest[x] = src[i];
 		i++;
+		x++;
 	}
-	dest[j + i] = '\0';
+	dest[x] = '\0';
 	return (dest);
 }
