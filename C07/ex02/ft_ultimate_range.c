@@ -1,39 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 09:17:53 by akheired          #+#    #+#             */
-/*   Updated: 2023/10/02 12:33:38 by akheired         ###   ########.fr       */
+/*   Updated: 2023/10/02 12:34:11 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	*arr;
 	int	i;
-	int	size;
+	int	dif;
+	int	*all;
 
+	if (min >= max)
+	{
+		*range = 0;
+		return (0);
+	}
+	dif = max - min;
+	all = malloc(dif * sizeof(int));
+	if (!all)
+	{
+		*range = 0;
+		return (-1);
+	}
 	i = 0;
-	if (max <= min || max == min)
-		return (NULL);
-	size = max - min + 1;
-	arr = (int *)malloc(sizeof(int) * size);
-	i = 0;
-	while (min < max)
-		arr[i++] = min++;
-	return (arr);
+	*range = all;
+	while (i < dif)
+	{
+		all[i] = min + i;
+		i++;
+	}
+	return (dif);
 }
 
 // int	main()
 // {
-// 	int *arr = ft_range(1, 4);
-// 	printf("%d", *arr);
-// 	free(arr);
+// 	int *gol;
+// 	int db;
+// 	int i = 0;
+// 	db = ft_ultimate_range(&gol, 3, 8);
+// 	while(i < db)
+// 	{
+// 		printf("%d", gol[i]);
+// 		if(i != db - 1)
+// 			printf(", ");
+// 		i++;
+// 	}
 // 	return 0;
 // }
